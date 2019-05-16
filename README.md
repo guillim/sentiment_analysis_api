@@ -4,7 +4,7 @@ A small api for sentiment analysis encapsulated in docker.
 
 ## Live demo
 
-Check this [demo](http://sentiment-analysis-api.herokuapp.com/documentation/) to see this tool in action !
+Check this [demo](http://guillim-sentiment-analysis-api.herokuapp.com/documentation/) to see this tool in action !
 (Thanks Heroku for hosting it)
 
 
