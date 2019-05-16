@@ -43,20 +43,29 @@ Then you can use the API to send some text and receive the sentiment analysis. W
 
 ```bash
 curl -X POST \
-  http://127.0.0.1:5000/sentiment \
-  -H 'Content-Type: application/json' \
-  -H 'cache-control: no-cache' \
-  -d '{
-	"text": "Paris est la capitale de la France. L’agglomération de Paris compte plus de 10 millions d’habitants. Un fleuve traverse la capitale française, c’est la Seine. Dans Paris, il y a deux îles :  l’île de la Cité et l’île Saint-Louis.Paris compte vingt arrondissements. Le 16e, le 7e et le 8e arrondissements de Paris sont les quartiers les plus riches. Ils sont situés dans l’ouest de la capitale. Les quartiers populaires comme le 19e et le 20e sont au nord-est de la ville. Les monuments célèbres, les ministères, le palais de l’Élysée sont situés dans le centre de Paris.Paris est la capitale économique, la capitale politique et la capitale culturelle de la France. La ville compte beaucoup de lieux célèbres dans le monde entier comme « la tour Eiffel » , « l’Arc de Triomphe » et « Notre-Dame de Paris ». Les musées parisiens aussi sont très connus. Il y a, par exemple, le musée du Louvre. C’est le plus grand musée de France. On peut voir dans le musée du Louvre des tableaux magnifiques. Le plus célèbre est certainement « La Joconde » de Léonard de Vinci.Paris est une ville très touristique. Chaque année, des millions de touristes du monde entier marchent sur les amps-Élysées. Ils séjournent à l’hôtel, louent des chambres d’hôtes ou des appartements pour une semaine."
-}'
- ```
+  http://guillim-sentiment-analysis-api.herokuapp.com/sentiment \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \ 
+  -d '{ 
+        "analyzer": "PatternAnalyzer", 
+	"text": "Paris is a nice city to live in. I like New york as well, but Paris has a charm you cannot find elsewhere"
+  }'  
+```
 
 
 Returns:
 
 
 ```
-to be completed  
+{
+  "sentiment": "positive",
+  "sentiment_score": [
+    0.2909090909090909,
+    0.6515151515151515
+  ],
+  "detected_language": "en",
+  "message": ""
+}
 ```
 
 #### Swagger
