@@ -1,6 +1,6 @@
 # Sentiment analysis API
 
-A small api for sentiment analysis encapsulated in docker.
+A small api for sentiment analysis (TextBlob in the background) encapsulated in docker.
 
 ## Live demo
 
